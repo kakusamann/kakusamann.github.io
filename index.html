@@ -41,7 +41,7 @@
 				background-color: black;
 
 				color: aliceblue;
-				font-size: 60px;
+				font-size: 4.5rem;
 				text-align: center;
 
 			}
@@ -49,14 +49,14 @@
 			.content {
 				width: auto;
 				height: 1600px;
-				margin: 10px auto;
-				padding: 20px 20px;
+				margin: 0.5rem auto;
+				padding: 0.2rem 0.2rem;
 
 				background-attachment: fixed;
-				background-color: black;
+				background-color: transparent;
 				background-repeat: no-repeat;
 				background-size: 100% auto;
-				
+				background-image: url("back.png");
 
 			}
 
@@ -67,15 +67,15 @@
 				
 				background-color: rgba(0, 0, 0, 0.3);
 
-				border-radius: 5px;
-				margin-bottom: 10px;
+				border-radius: 0.3125rem;
+				margin-bottom: 0.625rem;
 				
 				animation-name: example;
 				animation-duration: 0.5s;
 			}
 
 			.csdn_block {
-				width: 40%;
+				width: 60%;
 				height: 90%;
 				background-color: transparent;
 				
@@ -84,16 +84,25 @@
 			}
 
 			.bilibili_block {
-				width: 40%;
+				width: 30%;
 				height: 90%;
 				background-color: transparent;
 
 				margin-top: 1%;
 				float: right;
+				
+				/* 设置指针和过渡时间 */
+				cursor:crosshair;
+				transition: all 0.6s;
 			}
+			.bilibili_block:hover{
+				/* 设置缩放倍数 */
+				transform: scale(1.1);
+			}
+			
+			
 
 			.show_img {
-
 				list-style-image: inherit;
 			}
 
@@ -106,7 +115,7 @@
 				float: left;
 				overflow: auto;
 
-				border-radius: 5px;
+				border-radius: 0.3125rem;
 				
 				animation-name: example;
 				animation-duration: 1s;
@@ -118,24 +127,24 @@
 				background-color: transparent;
 
 				color: antiquewhite;
-				line-height: 35px;
-				font-size: 30px;
+				line-height: 2.1875rem;
+				font-size: 1.875rem;
 				font-family: "楷体";
 				text-align: center;
 
-				padding-left: 15px;
-				padding-top: 10px;
+				padding-left: 0.9375rem;
+				padding-top: 0.625rem;
 			}
 
 			.content_left_content {
 				width: 100%;
 				height: auto;
 				background-color: transparent;
-				padding: 20px 0px;
+				padding: 1.25rem 0px;
 
 				color: #ffffff;
-				line-height: 30px;
-				font-size: 18px;
+				line-height: 1.875rem;
+				font-size: 1.125rem;
 				font-family: "微软雅黑";
 				text-align: center;
 
@@ -150,9 +159,9 @@
 				
 				margin-left: 0.5%;
 				float: left;
-				<!-- overflow表示的是div中内容溢出如何处理 -->
+				/*<!-- overflow表示的是div中内容溢出如何处理 -->*/
 				overflow: overlay;      
-				border-radius: 5px;
+				border-radius: 0.3125rem;
 				
 				animation-name: example;
 				animation-duration: 1s;
@@ -164,13 +173,13 @@
 					background-color: transparent;
 				
 					color: antiquewhite;
-					line-height: 35px;
-					font-size: 30px;
+					line-height: 2.1875rem;
+					font-size: 1.875rem;
 					font-family: "楷体";
 					text-align: center;
 				
-					padding-left: 15px;
-					padding-top: 10px;
+					padding-left: 0.9375rem;
+					padding-top: 0.625rem;
 				}
 			
 			.content_right {
@@ -182,7 +191,7 @@
 				margin-left: 0.5%;
 				float: left;
 				overflow: overlay;
-				border-radius: 5px;
+				border-radius: 0.3125rem;
 				
 				animation-name: example;
 				animation-duration: 1s;
@@ -194,28 +203,28 @@
 				background-color: transparent;
 
 				color: antiquewhite;
-				line-height: 35px;
-				font-size: 30px;
+				line-height: 2.1875rem;
+				font-size: 1.875rem;
 				font-family: "楷体";
 				text-align: center;
 
-				padding-left: 15px;
-				padding-top: 10px;
+				padding-left: 0.9375rem;
+				padding-top: 0.625rem;
 			}
 
 			.content_right_content {
 				width: 100%;
 				height: auto;
 				background-color: transparent;
-				padding: 20px 0px;
+				padding: 1.25rem 0px;
 
 				color: #ffffff;
-				line-height: 30px;
-				font-size: 18px;
+				line-height: 1.875rem;
+				font-size: 1.125rem;
 				font-family: "微软雅黑";
 				text-align: center;
 
-				padding-left: 15px;
+				padding-left: 0.9375rem;
 			}
 
 			
@@ -225,14 +234,14 @@
 				width: 100%;
 				height: 1000px;
 				background-color: black;
-				background-color: rgba(0, 0, 0, 1);
-				
+				background-color: rgba(0, 0, 0, 0.3);
+				background-image: url(back3.jpg);
 				background-repeat: no-repeat;
 				background-size: 100%, 100%;
 			
 			
-				margin-bottom: 10px;
-				margin-top: 10px;
+				margin-bottom: 0.625rem;
+				margin-top: 0.625rem;
 			
 				display: flex;
 				
@@ -240,7 +249,7 @@
 			}
 			
 			.textABC{
-				font-size: 10px;
+				font-size: 0.625rem;
 				font-family: "新宋体";
 				font-weight: lighter;
 				color: burlywood;
@@ -252,27 +261,13 @@
 			.end {
 				width: auto;
 				height: 60px;
-				font-size: 10px;
+				font-size: 0.625rem;
 				text-align: right;
 				color: #ffffff;
 				background-color: #000000;
 			}
 			
-			.dropdown {
-			  position: relative;
-			  display: inline-block;
-			}
-			.dropdown-content {
-			  display: none;
-			  position: absolute;
-			  background-color: #f9f9f9;
-			  min-width: 160px;
-			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			  padding: 12px 16px;
-			}
-			.dropdown:hover .dropdown-content {
-			  display: block;
-			}
+			
 			
 			
 			.stitle{
@@ -288,15 +283,15 @@
 					height: 230px;
 					background-color: rgba(241, 131, 52, 0.2);
 
-					padding:20px 20px;
+					padding:1.25rem 1.25rem;
 
 					margin-top: 1%;
 					margin-left: 75%;
-					border-radius: 5px;
+					border-radius: 0.3125rem;
 					
-					<!-- 添加动画记得登记 -->
+					/* 添加动画记得登记 */
 					animation-name: example;
-					animation-duration: 1.25s;
+					animation-duration: 1s;
 			}
 			
 			
@@ -306,31 +301,58 @@
 			}
 			
 			@keyframes example_x {
-			  0%   { background-color: black; color: black;}
-			  50%   { background-color: white; color: white;}
-			  100% {background-color: transparent; color: cornsilk;}
+			  0%   {  transform: scale(0, 0);}
+			  100% { transform: scale(1, 1);}
 			}
 			
 			.minitips{
-				width: 100px;
-				height: 40px;
+				width: 10rem;
+				height: 2.5rem;
 				background-color: transparent;
-				border: 1px dashed aquamarine;
+				border: 0.0625rem dashed aquamarine;
 				
 				align-self: center;
-				padding: 10px 0 0 0;
+				padding: 0.625rem 0 0 0;
 				text-align: center;
 				font-family: "new york";
-				font-size: 20px;
+				font-size: 1.25rem;
 				color: cornsilk;
-				border-radius: 5px;
-				margin-left: 30px;
+				border-radius: 0.3125rem;
+				margin-left: 1.875rem;
+				margin-top: 1.25rem;
 				
 				float: left;
 				
 				animation-name: example_x;
 				animation-duration: 1.8s;
+				
+				/* 设置指针样式 */
+				cursor: crosshair;
+				/* 设置过度时间 */
+				transition: all 0.6s;
 			}
+			.minitips:hover{
+				/* 设置缩放倍数 */
+				transform: scale(1.4);
+			}
+			
+			.work_show_area{
+				width: 25%;
+				height: 21.875rem;
+				background-color: transparent;
+				margin-left: 10%;
+				margin-top: 1.25rem;
+				
+				float: left;
+				
+				cursor: crosshair;
+				transition: all 0.6s;
+			}
+			.work_show_area:hover{
+				transform: scale(1.4);
+			}
+			
+			
 		</style>
 	</head>
 
@@ -347,10 +369,10 @@
 			<div class="open_window">
 				<div class="csdn_block">
 					<div class="stitle">
-						<p>2021计划与目标</p><br><br><br><br>
+						<p>2021计划与目标</p><br><br>
 					</div>
 					<div class="minitips" id="goal_1">
-						<p>日语N2</p>
+						<a href="https://www.jlpt.jp/cn/index.html" target="_blank"> 日语N2 </a>
 					</div>
 					<div class="minitips" id="goal_2">
 						<p>半导体芯片</p>
@@ -362,12 +384,15 @@
 						<p>英语六级</p>
 					</div>
 					<div class="minitips" id="goal_5">
-						<p>c++</p>
+						<p>c# && blender</p>
+					</div>
+					<div class="minitips" id="goal_5">
+						<a href="https://query.ruankao.org.cn/" target="_blank"> 软考成绩查询</a>
 					</div>
 				</div>
 
 				<div class="bilibili_block">
-						<img src="back2.jpg" height="100%">
+						<img src="back2.jpg" width="75%">
 				</div>
 			</div>
 
@@ -415,6 +440,7 @@
 					
 					</br><p class="stitle">👇 工具类 👇</p>
 					<a href="https://tool.lu/" target="_blank"> Online Tool</a></br>
+					<a href="https://home.code-nav.cn/" target="_blank"> 程序员导航</a></br>
 					<a href="https://www.edrawsoft.cn/mindmaster/shortcut/" target="_blank"> mindmaster快捷键大全</a></br>
 					<a href="https://kaifa.baidu.com/home" target="_blank"> 开发人员baidu </a></br>
 					<a href="https://msdn.itellyou.cn/" target="_blank"> i tell you </a></br>
@@ -440,7 +466,19 @@
 				<div class="content_center_content">
 					<!-- 设置内容 -->
 			
-					<p class="stitle">👇 还没想好-.- 👇</p>
+					<p class="stitle">👇 工作期待 👇</p>
+                   <div class="work_show_area" id="w1">
+						<img src="work_01.jpg" height="100%">
+                   </div>
+				   <div class="work_show_area" id="w2">
+						<img src="work_02.jpg" height="100%">
+				   </div>
+
+
+
+
+
+
 				</div>
 			</div>
 
@@ -487,16 +525,7 @@
 			<div class="tips">
 				<h1 class="stitle" >⭐宣言⭐</h1><br>
 				<p class="textABC">
-				我的理想很明确，从来没有改变过，但是所有人都觉的我摇摆不定...
-				现在我明白了，我理想的生活，只能靠我自己，依靠别人得到的幸福，终究沾染着别人的颜色；
-				相信自己，不管别人怎么说，只要成功了，就不会有闲言杂语；
-				之前就是太在意别人的眼光和评价，所以最后总是在犹豫和踌躇中败下阵脚；
-				我敬佩那些成功的同学们，就算被各种冷嘲热讽，自己也会支持自己；
-				我得学会成为自己的应援者，而不是帮别人说服自己，走别人走过的所谓的成功路；
-				当然要低下头来，向别人学习，但是核心思想不能变，执着不能变，一旦没有了坚持，热血同尸骨；
-				工作：最终目标米哈游【进入游戏公司是永恒的梦想，我的执念一直没变，只是所有人都觉得我朝三暮四，我很专一】
-				职责：游戏开发类
-				ps：再怎么说，电子信息也是靠近了计算机，有进入游戏类公司的可能性！Fight！能拯救我自己的，也只有我自己。
+				我的理想 -- himiysu
 				</p>
 			</div>
 				
