@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new test</title>
+	<style type="text/css">
+		.button{
+			width: 6rem;
+			height: 1.5rem;
+			/* 需要将button转换为块元素才能实现位置移动 */
+			display: inline-block;
+			margin: 1rem auto;
+
+		}
+		.td_class{
+			text-align: center;
+			height: 2rem;
+		}
+		#buttonBox{
+			width: 20rem;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function()
+		{	
+			var buttonAdd = document.getElementById("addButton");
+			addButton.onclick = function()
+			{
+				var addGirlName = prompt("请输入添加的名字");
+				addGirlName.replace(/^\s*|\s*$/g,"");
+				var addGirlSource = prompt("请输入她的家乡");
+				addGirlSource.replace(/^\s*|\s*$/g,"");
+				var addGirlSlogans = prompt("请输入 印记");
+				addGirlSlogans.replace(/^\s*|\s*$/g,"");
+				var newTr = document.createElement("tr");
+				newTr.innerHTML = "<td class='td_class'>" + addGirlName + "</td>"
+									+ "<td class='td_class'>" + addGirlSource + "</td>"
+									+ "<td class='td_class'>" + addGirlSlogans + "</td>";
+				var idol_list = document.getElementById("idol_list");
+				idol_list.appendChild(newTr);
+			}
+			deleteButton.onclick = function()
+			{
+				var idol_list = document.getElementById("idol_list");
+				var childrens = idol_list.children;
+				idol_list.removeChild(childrens[childrens.length-1]);
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- 表格：展示热爱的人物名单 -->
+	<table id="idol_list" border="1" width="50%" align="center">
+		<tr>
+			<!--这里colspan表示横向跨度-->
+			<td class="td_class" colspan="3">Girls -- I need .</td>
+		</tr>
+		<tr>
+			<td class="td_class">Name</td>
+			<td class="td_class">Source</td>
+			<td class="td_class">Slogans</td>
+		</tr>
+	</table>
+	<div id="buttonBox">
+		<button id="addButton" class="button">Add a Girl</button>
+		<button id="deleteButton" class="button">Delete a Girl</button>
+	</div>
+	
+	
+</body>
+</html>

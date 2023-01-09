@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EventCountdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #backgroundDiv{
+            width: 30rem;
+            height: 12rem;
+            border-radius: 2rem;
+            background-color: honeydew;
+            margin: 0 auto;
+        }
+        .titleStyle{
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: 幼圆;
+            color: salmon;
+
+        }
+        #contentBlock{
+            width: 80%;
+            height: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .inputStyle{
+
+        }
+        .showStyle{
+            text-align: center;
+            font-size: 0.6rem;
+            margin: 0.9rem auto;
+        }
+        .inputPrompt{
+            font-size: 0.5rem;
+            color: rgba(0, 0, 0, 0.4);
+        }
+        #submitButton{
+            margin-top: 0.8rem;
+        }
+        #titleBlock{
+            width: auto;
+            height: 23%;
+            overflow: hidden;
+            padding-top: 1.1rem;
+        }
+        #showTable{
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            border-radius: 0.6rem;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+			// 实现回退到主页的功能
+			var backToHome  = document.getElementById("backToHome");
+			backToHome.addEventListener("click", function(){
+				alert(window.history.length);
+			},false);
+			// 实现设置任务功能
+            var submitButton = document.getElementById("submitButton");
+            submitButton.onclick = function () {
+                if (confirm("确定提交吗？"))
+                {
+                    // 获取输入内容 -- string
+                    var inputTarget = document.getElementById("task").value;
+                    var inputTime = document.getElementById("finishTime").value;
+                    /*对输入的目标做去除前后空格处理*/
+                    inputTarget = inputTarget.replace(/^\s*|\s*$/g,"");
+                    /*对输入的时间做格式处理*/
+                    inputTime = inputTime.replace(/^\s*|\s*$/g,"");
+                    var timeReg = /^[0-1]?[0-9]\/[1-5]?[0-9]\/[1-5]?[0-9]$/;
+                    while (!timeReg.test(inputTime))
+                    {
+                        var newTime = prompt("输入的时间格式有误，重新输入！");
+                        inputTime = newTime.replace(/^\s*|\s*$/g,"");
+                    }
+                    // 先清除原有元素
+                    var contentBlock = document.getElementById("contentBlock");
+                    contentBlock.parentNode.removeChild(contentBlock);
+                    // 创建新的元素
+                    var newContentBlock = document.createElement("div");
+                    newContentBlock.innerHTML = "<table id='showTable' border='5'><tr><td><p class='showStyle'>目标任务：" + inputTarget+ "</p></td></tr>" +
+                        "<tr><td><p class='showStyle'>完成时间：" + inputTime + "</p></td></tr></table>";
+
+                    var backgroundDiv = document.getElementById("backgroundDiv");
+                    backgroundDiv.appendChild(newContentBlock);
+                }else{
+                    // 犹豫不绝
+                    alert("那就再考虑一下把~");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+	<input type="button" name="backToHome" id="backToHome" value="<back" />
+    <div id="backgroundDiv">
+        <div id="titleBlock">
+            <p class="titleStyle">设置任务</p>
+        </div>
+        <div id="contentBlock">
+            目标任务：<input class="inputStyle" id="task" type="text" name="task" ><br>
+            <p class="inputPrompt">（这里输入近期的一个目标）</p>
+            完成时间：<input class="inputStyle" id="finishTime" type="text" name="finishTime" ><br>
+            <p class="inputPrompt">（时间格式：小时/分钟/秒）</p>
+            <button id="submitButton">确定任务！</button>
+        </div>
+    </div>
+</body>
+</html>
