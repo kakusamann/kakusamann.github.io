@@ -43,9 +43,21 @@
 			<div class="content">
 				<p id="notice01">Please input code</p>
 				<br><br>
-				<input type="password">
-				<br><br><button>I know, submit!</button>
+				<input id="passcode" type="password" placeholder="密码" />
+				<br><br><button type="submit" onclick="goin()" >I know, submit!</button>
 			</div>
 		</div>
+		<script>
+			function goin() {
+				var pcode = document.getElementById("passcode");
+				if (pcode.value === "999888gyd") {
+					alert("进入成功！");
+					window.open("nainduzongjie.html");
+				} else {
+					alert("你被禁止查看 X");
+				}
+			}
+		</script>
 	</body>
+	
 </html>
