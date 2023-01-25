@@ -409,6 +409,10 @@ ul {
     }
 
     .mapImg {
+        margin: auto;
         height: 18rem;
         width: 35rem;
+    }
+    .goalImgs {
+        border-radius: 1.2rem;
     }
