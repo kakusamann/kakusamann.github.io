@@ -1,138 +1,271 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秘密基地</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
+        header {
+            background: #35495e;
+            color: #fff;
+            padding: 20px 10px;
             text-align: center;
+            width: 100%;
         }
-        .header h1 {
-            margin: 0;
+        main {
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
         }
-        .section {
-            background-color: white;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            margin-top: 0;
-        }
-        .section p {
-            line-height: 1.6;
-        }
-        .skills, .contact-info {
+        .row {
             display: flex;
             justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
         }
-        .skills .skill, .contact-info .contact {
-            width: 48%;
+        .content {
+            flex: 2;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        .calendar {
+            flex: 1;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        .calendar header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .calendar th, .calendar td {
+            width: 14.2%;
+            height: 40px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .calendar th {
+            background: #35495e;
+            color: white;
+        }
+        .calendar td:hover {
+            background: #f0f0f0;
+            cursor: pointer;
+        }
+        .calendar .today {
+            background: #ff6347;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #35495e;
+        }
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .links li {
+            margin: 5px 0;
+        }
+        .links a {
+            text-decoration: none;
+            color: #0078d7;
+        }
+        .links a:hover {
+            text-decoration: underline;
         }
         footer {
+            background: #35495e;
+            color: #fff;
             text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+            position: relative;
+        }
+        .module {
+            flex: 1;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            min-width: 300px;
+        }
+        .module h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #35495e;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <!-- Header -->
-    <div class="header">
-        <h1>Yudong Guo</h1>
-        <p>Your Profession or Title</p>
-    </div>
-
-    <!-- Personal Information -->
-    <div class="section">
-        <h2>Personal Information</h2>
-        <p><strong>Name:</strong> Yudong Guo</p>
-        <p><strong>Location:</strong> Your Location</p>
-        <p><strong>Bio:</strong> Brief description about yourself.</p>
-    </div>
-
-    <!-- Professional Fields -->
-    <div class="section">
-        <h2>Professional Fields</h2>
-        <p>Describe your key areas of expertise. For example: </p>
-        <ul>
-            <li>Field 1 (e.g., Web Development, Data Science)</li>
-            <li>Field 2 (e.g., Machine Learning, Environmental Science)</li>
-            <li>Field 3 (e.g., Software Engineering)</li>
-        </ul>
-    </div>
-
-    <!-- Academic Achievements -->
-    <div class="section">
-        <h2>Academic Achievements</h2>
-        <ul>
-            <li>Research Paper 1: Title (Published in XYZ Journal)</li>
-            <li>Research Paper 2: Title (Published in ABC Journal)</li>
-            <li>Thesis: Your thesis title</li>
-        </ul>
-    </div>
-
-    <!-- Skills and Certifications -->
-    <div class="section">
-        <h2>Skills and Certifications</h2>
-        <div class="skills">
-            <div class="skill">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Programming Language 1 (e.g., Python)</li>
-                    <li>Programming Language 2 (e.g., C++)</li>
-                    <li>Other skills (e.g., Web Development, Database Management)</li>
-                </ul>
+    <header>
+        <h1>秘密基地</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div class="content">
+                <h2>Info</h2>
+                <p>
+                    这里将成为我未来的个人网站，用来展示我的全部个人成就。
+                </p>
             </div>
-            <div class="skill">
-                <h3>Certifications</h3>
-                <ul>
-                    <li>Certification 1 (e.g., AWS Certified Solutions Architect)</li>
-                    <li>Certification 2 (e.g., Microsoft Certified: Azure Fundamentals)</li>
-                </ul>
+            <div class="calendar">
+                <header>
+                    <button id="prev">《</button>
+                    <h3 id="month-year">2024年12月</h3>
+                    <button id="next">》</button>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>日</th>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- 日历的动态内容会插入到这里 -->
+                    </tbody>
+                </table>
+                <div class="links">
+                    <h3>常用链接</h3>
+                    <ul>
+                        <li><a href="https://www.notion.so/80e738b538f642d1913087d4fada73cb" target="_blank">Notion</a></li>
+                        <li><a href="https://www.bing.com" target="_blank">Bing</a></li>
+                        <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Information -->
-    <div class="section">
-        <h2>Contact Information</h2>
-        <div class="contact-info">
-            <div class="contact">
-                <h3>Email</h3>
-                <p>your.email@example.com</p>
+        <div class="row">
+            <div class="module">
+                <h2>材料科学</h2>
+                <p>
+                    材料科学模块内容示例：这里将展示有关材料科学领域的最新研究、理论和应用。
+                </p>
             </div>
-            <div class="contact">
-                <h3>Phone</h3>
-                <p>+123 456 7890</p>
+            <div class="module">
+                <h2>计算机</h2>
+                <p>
+                    计算机模块内容示例：该模块包含有关计算机科学、人工智能和软件开发的资源和文章。
+                </p>
+            </div>
+            <div class="module">
+                <h2>数据科学</h2>
+                <p>
+                    数据科学模块内容示例：展示数据分析、机器学习和大数据处理的相关内容。
+                </p>
             </div>
         </div>
-    </div>
-</div>
+    </main>
+    <footer>
+        <p>&copy; 2024 GYD. All rights reserved.</p>
+    </footer>
+    <script>
+        const calendarBody = document.getElementById('calendar-body');
+        const monthYear = document.getElementById('month-year');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Yudong Guo. All Rights Reserved.</p>
-</footer>
+        let currentDate = new Date();
+        const today = new Date(); // 用于高亮今天的日期
 
+        function renderCalendar(date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const firstDayOfMonth = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // 设置当前月份和年份
+            monthYear.textContent = `${year}年${month + 1}月`;
+
+            // 清空之前的日历
+            calendarBody.innerHTML = '';
+
+            // 填充日历
+            let row = document.createElement('tr');
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                row.appendChild(document.createElement('td'));
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const cell = document.createElement('td');
+                cell.textContent = day;
+
+                // 高亮今天的日期
+                if (
+                    year === today.getFullYear() &&
+                    month === today.getMonth() &&
+                    day === today.getDate()
+                ) {
+                    cell.classList.add('today');
+                }
+
+                row.appendChild(cell);
+
+                // 每行有7天，满了则换行
+                if ((firstDayOfMonth + day) % 7 === 0) {
+                    calendarBody.appendChild(row);
+                    row = document.createElement('tr');
+                }
+            }
+
+            // 添加最后一行
+            if (row.children.length > 0) {
+                calendarBody.appendChild(row);
+            }
+        }
+
+        // 上个月
+        prevBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        });
+
+        // 下个月
+        nextBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        });
+
+        // 初始化日历
+        renderCalendar(currentDate);
+    </script>
 </body>
 </html>
